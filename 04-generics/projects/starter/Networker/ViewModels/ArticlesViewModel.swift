@@ -19,7 +19,6 @@ class ArticlesViewModel: ObservableObject {
   func fetchArticles() {
     let request = ArticleRequest()
     networker.fetch(request)
-      .tryMap([Article].init)
       .replaceError(with: [])
       .assign(to: \.articles, on: self)
       .store(in: &cancellables)
@@ -35,11 +34,14 @@ class ArticlesViewModel: ObservableObject {
 
     let request = ImageRequest(url: article.image)
     networker.fetch(request)
-      .map(UIImage.init)
-      .replaceError(with: nil)
-      .sink { [weak self] image in
+      .sink(receiveCompletion: { completion in
+        switch completion {
+        case .failure(let error): print(error)
+        default: break
+        }
+      }, receiveValue: { [weak self] image in
         self?.articles[articleIndex].downloadedImage = image
-      }
+      })
       .store(in: &cancellables)
   }
 }

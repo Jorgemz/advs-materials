@@ -14,4 +14,10 @@ struct ArticleRequest: Request {
   }
 
   var method: HTTPMethod { .get }
+  
+  func decode(_ data: Data) throws -> [Article] {
+    let decoder = JSONDecoder()
+    let articlesCollection = try decoder.decode(Articles.self, from: data)
+    return articlesCollection.data.map { $0.article }
+  }
 }

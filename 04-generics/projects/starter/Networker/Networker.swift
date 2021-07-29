@@ -31,26 +31,34 @@ extension NetworkingDelegate {
 
 protocol Networking {
   var delegate: NetworkingDelegate? { get set }
-  func fetch(_ request: Request) -> AnyPublisher<Data, URLError>
+  func fetch<T: Decodable>(url: URL) -> AnyPublisher<T, Error>
+  func fetch<R: Request>(_ request: R) -> AnyPublisher<R.Output, Error>
 }
 
 class Networker: Networking {
   weak var delegate: NetworkingDelegate?
 
-  func fetch(_ request: Request) -> AnyPublisher<Data, URLError> {
+  func fetch<T: Decodable>(url: URL) -> AnyPublisher<T, Error> {
+    URLSession.shared.dataTaskPublisher(for: url)
+      .map { $0.data }
+      .decode(type: T.self, decoder: JSONDecoder())
+      .eraseToAnyPublisher()
+  }
+  
+  func fetch<R: Request>(_ request: R) -> AnyPublisher<R.Output, Error> {
     var urlRequest = URLRequest(url: request.url)
     urlRequest.httpMethod = request.method.rawValue
     urlRequest.allHTTPHeaderFields = delegate?.headers(for: self)
 
-    let publisher = URLSession.shared
+    var publisher = URLSession.shared
       .dataTaskPublisher(for: urlRequest)
       .compactMap { $0.data }
       .eraseToAnyPublisher()
 
     if let delegate = delegate {
-      return delegate.networking(self, transformPublisher: publisher)
-    } else {
-      return publisher
+      publisher = delegate.networking(self, transformPublisher: publisher)
     }
+
+    return publisher.tryMap(request.decode).eraseToAnyPublisher()
   }
 }
