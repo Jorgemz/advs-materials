@@ -12,8 +12,8 @@
 		18D775C722AD944400AE281E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C622AD944400AE281E /* Assets.xcassets */; };
 		18D775CA22AD944400AE281E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C922AD944400AE281E /* Preview Assets.xcassets */; };
 		18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D775DA22AD963800AE281E /* LaunchScreen.storyboard */; };
-		5D7A960D26103F4700EF03C3 /* QuadTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A960C26103F4700EF03C3 /* QuadTree.swift */; };
-		5D7A96102610401300EF03C3 /* QuadTreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A960F2610401300EF03C3 /* QuadTreeViewModel.swift */; };
+		5D7A960D26103F4700EF03C3 /* QuadTreeIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A960C26103F4700EF03C3 /* QuadTreeIN.swift */; };
+		5D7A96102610401300EF03C3 /* QuadTreePR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A960F2610401300EF03C3 /* QuadTreePR.swift */; };
 		5D7A96132610407500EF03C3 /* QuadTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A96122610407500EF03C3 /* QuadTreeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,8 +25,8 @@
 		18D775C922AD944400AE281E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18D775CE22AD944400AE281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D775DE22AD96B400AE281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5D7A960C26103F4700EF03C3 /* QuadTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadTree.swift; sourceTree = "<group>"; };
-		5D7A960F2610401300EF03C3 /* QuadTreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadTreeViewModel.swift; sourceTree = "<group>"; };
+		5D7A960C26103F4700EF03C3 /* QuadTreeIN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadTreeIN.swift; sourceTree = "<group>"; };
+		5D7A960F2610401300EF03C3 /* QuadTreePR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadTreePR.swift; sourceTree = "<group>"; };
 		5D7A96122610407500EF03C3 /* QuadTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadTreeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,9 +64,9 @@
 			children = (
 				1839F4AF25190F2A00BB00F1 /* AppMain.swift */,
 				18D775C422AD944300AE281E /* ContentView.swift */,
-				5D7A960C26103F4700EF03C3 /* QuadTree.swift */,
+				5D7A960C26103F4700EF03C3 /* QuadTreeIN.swift */,
 				5D7A96122610407500EF03C3 /* QuadTreeView.swift */,
-				5D7A960F2610401300EF03C3 /* QuadTreeViewModel.swift */,
+				5D7A960F2610401300EF03C3 /* QuadTreePR.swift */,
 				18D775C622AD944400AE281E /* Assets.xcassets */,
 				18D775DA22AD963800AE281E /* LaunchScreen.storyboard */,
 				18D775CE22AD944400AE281E /* Info.plist */,
@@ -177,8 +177,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D7A96132610407500EF03C3 /* QuadTreeView.swift in Sources */,
-				5D7A960D26103F4700EF03C3 /* QuadTree.swift in Sources */,
-				5D7A96102610401300EF03C3 /* QuadTreeViewModel.swift in Sources */,
+				5D7A960D26103F4700EF03C3 /* QuadTreeIN.swift in Sources */,
+				5D7A96102610401300EF03C3 /* QuadTreePR.swift in Sources */,
 				18D775C522AD944300AE281E /* ContentView.swift in Sources */,
 				1839F4B025190F2A00BB00F1 /* AppMain.swift in Sources */,
 			);

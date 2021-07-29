@@ -7,7 +7,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-  @StateObject var model = QuadTreeViewModel()
+  @StateObject var model = QuadTreePR()
 
   private var drag: some Gesture {
     DragGesture(minimumDistance: 0, coordinateSpace: .local).onChanged { gesture in

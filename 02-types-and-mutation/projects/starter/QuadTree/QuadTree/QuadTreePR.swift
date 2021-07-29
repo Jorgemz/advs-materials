@@ -9,8 +9,8 @@ enum Mode {
   case add, find
 }
 
-final class QuadTreeViewModel: ObservableObject {
-  private var quadTree = QuadTree(region: CGRect(x: 0, y: 0, width: 1, height: 1))
+final class QuadTreePR: ObservableObject {
+  private var quadTree = QuadTreeIN(region: CGRect(x: 0, y: 0, width: 1, height: 1))
   var windowSize: CGSize?
   @Published var mode: Mode = .add
   @Published var findWindow: CGRect?
@@ -63,7 +63,7 @@ final class QuadTreeViewModel: ObservableObject {
 
   func clear() {
     objectWillChange.send()
-    quadTree = QuadTree(region: CGRect(x: 0, y: 0, width: 1, height: 1))
+    quadTree = QuadTreeIN(region: CGRect(x: 0, y: 0, width: 1, height: 1))
     findWindow = nil
     foundPoints = []
     mode = .add

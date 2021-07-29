@@ -15,7 +15,7 @@ struct SizeKey: PreferenceKey {
 }
 
 struct QuadTreeView: View {
-  @ObservedObject var model: QuadTreeViewModel
+  @ObservedObject var model: QuadTreePR
 
   @ViewBuilder
   private var findWindow: some View {
