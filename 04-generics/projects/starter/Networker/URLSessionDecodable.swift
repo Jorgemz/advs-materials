@@ -5,6 +5,6 @@
 
 import Foundation
 
-protocol URLSessionDecodable {
-  init(from output: Data) throws
-}
+//protocol URLSessionDecodable {
+//  init(from output: Data) throws
+//}

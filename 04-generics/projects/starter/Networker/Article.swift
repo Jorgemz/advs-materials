@@ -35,11 +35,11 @@ struct ArticleData: Codable {
   }
 }
 
-extension Array: URLSessionDecodable where Element == Article {
-  init(from output: Data) throws {
-    let decoder = JSONDecoder()
-    let articlesCollection = try decoder.decode(Articles.self, from: output)
-    let articles = articlesCollection.data.map { $0.article }
-    self.init(articles)
-  }
-}
+//extension Array: URLSessionDecodable where Element == Article {
+//  init(from output: Data) throws {
+//    let decoder = JSONDecoder()
+//    let articlesCollection = try decoder.decode(Articles.self, from: output)
+//    let articles = articlesCollection.data.map { $0.article }
+//    self.init(articles)
+//  }
+//}

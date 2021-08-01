@@ -26,3 +26,8 @@ extension Request where Output: Decodable {
     return try decoder.decode(Output.self, from: data)
   }
 }
+
+struct AnyRequest: Hashable {
+  let url: URL
+  let method: HTTPMethod
+}

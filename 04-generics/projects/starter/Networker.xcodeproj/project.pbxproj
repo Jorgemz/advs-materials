@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0960B90B26B3757100B159B7 /* RequestCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960B90A26B3757100B159B7 /* RequestCache.swift */; };
 		1839F4B025190F2A00BB00F1 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1839F4AF25190F2A00BB00F1 /* AppMain.swift */; };
 		18D775C522AD944300AE281E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D775C422AD944300AE281E /* ContentView.swift */; };
 		18D775C722AD944400AE281E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C622AD944400AE281E /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0960B90A26B3757100B159B7 /* RequestCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCache.swift; sourceTree = "<group>"; };
 		1839F4AF25190F2A00BB00F1 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
 		18D775BD22AD944300AE281E /* Networker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D775C422AD944300AE281E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				F5B80A81259C69F60081C076 /* Request.swift */,
 				F5B80A85259C6AC70081C076 /* ArticleRequest.swift */,
 				F5B80A89259C6BEC0081C076 /* Networker.swift */,
+				0960B90A26B3757100B159B7 /* RequestCache.swift */,
 				F5B80A8D259C70FC0081C076 /* ImageRequest.swift */,
 				F5B80A91259C74CE0081C076 /* URLSessionDecodable.swift */,
 			);
@@ -221,6 +224,7 @@
 				F541D8872599CA8700110F28 /* Article.swift in Sources */,
 				F550BB162599D46600720FAD /* ArticlesView.swift in Sources */,
 				18D775C522AD944300AE281E /* ContentView.swift in Sources */,
+				0960B90B26B3757100B159B7 /* RequestCache.swift in Sources */,
 				F550BB1A2599D5AB00720FAD /* ArticlesViewModel.swift in Sources */,
 				F5B80A86259C6AC70081C076 /* ArticleRequest.swift in Sources */,
 				F5B80A8A259C6BEC0081C076 /* Networker.swift in Sources */,

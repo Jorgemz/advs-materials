@@ -25,15 +25,14 @@ class ArticlesViewModel: ObservableObject {
   }
 
   func fetchImage(for article: Article) {
-    guard article.downloadedImage == nil,
+    guard
       let articleIndex = articles.firstIndex(where: { $0.id == article.id })
     else {
-      print("Already downloaded")
       return
     }
 
     let request = ImageRequest(url: article.image)
-    networker.fetch(request)
+    networker.fetchWithCache(request)
       .sink(receiveCompletion: { completion in
         switch completion {
         case .failure(let error): print(error)
